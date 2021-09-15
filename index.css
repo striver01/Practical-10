@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: rgb(57, 55, 55);
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.logo img {
+  width: 12vh;
+  height: 10vh;
+}
+header h2 {
+  font-size: 30px;
+  margin-left: 5px;
+  color: white;
+  font-family: arial;
+}
+.ham,
+.cross {
+  position: fixed;
+  top: 3vh;
+  left: 10px;
+}
+.bars input {
+  visibility: hidden;
+  z-index: -10;
+}
+.ham,
+.cross {
+  color: white;
+  font-size: 30px;
+}
+.cross {
+  display: none;
+}
+.sidebar {
+  left: -20%;
+  transition: 1s;
+  z-index: 10;
+  width: 20%;
+  background-color: rgb(57, 55, 55);
+  height: 90vh;
+  top: 10vh;
+  position: fixed;
+}
+.content {
+  width: 100%;
+  margin-top: 10vh;
+  padding: 20px;
+}
+#check:checked ~ .cross {
+  display: block;
+}
+#check:checked ~ .ham {
+  display: none;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ .content {
+  width: 80%;
+  float: right;
+  transition: 1s;
+}
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+.sidebar ul li a {
+  display: block;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  padding: 15px 25px;
+  transition: 0.4s;
+}
+span {
+  margin-left: 20px;
+}
+.sidebar ul li a:hover {
+  border-left: 10px solid white;
+}
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 30px;
+  margin-top: 200px;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 25px;
+}
+i {
+  font-size: 30px;
+  color: white;
+}
+.content img {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: auto;
+}
+.content p {
+  text-align: justify;
+  margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    left: -100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  header h1 {
+    display: none;
+  }
+  .content {
+    padding: 15px;
+  }
+}
