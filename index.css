@@ -116,7 +116,7 @@ i {
   text-align: justify;
   margin-top: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 760px) {
   .sidebar {
     left: -100%;
     width: 100%;
